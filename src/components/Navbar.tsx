@@ -1,12 +1,12 @@
 const navLinks = [
-  { label: 'Brand Soul', href: '#brand-soul' },
-  { label: 'Building For Bharat', href: '#building-for-bharat' },
-  { label: 'Learn with AG', href: '#learn-with-ag' },
-]
+  { label: "Brand Soul", href: "#brand-soul" },
+  { label: "Building For Bharat", href: "#building-for-bharat" },
+  { label: "Learn with AG", href: "#learn-with-ag" },
+];
 
 export default function Navbar() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-8">
+    <header className="px-4 pt-4 md:px-8 absolute top-0 left-0 z-20 w-full">
       <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full bg-forest px-5 py-3 shadow-lg md:px-8 md:py-4">
         <a
           href="#"
@@ -36,5 +36,5 @@ export default function Navbar() {
         </a>
       </nav>
     </header>
-  )
+  );
 }

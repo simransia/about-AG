@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { HERO_IMAGE } from "../data/content";
+import Navbar from "./Navbar";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -18,6 +19,7 @@ export default function HeroSection() {
       ref={containerRef}
       className="relative h-[881px] overflow-hidden bg-black"
     >
+      <Navbar />
       <img
         src={HERO_IMAGE}
         alt="Alkesh Gupta"

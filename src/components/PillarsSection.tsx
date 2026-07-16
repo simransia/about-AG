@@ -6,17 +6,15 @@ import scaleImage from "../assets/scale.png";
 
 export default function PillarsSection() {
   return (
-    <section className="bg-surface px-6 pb-28">
-      <div className="mx-auto max-w-4xl text-center mb-16">
-        <FadeIn>
-          <p className="text-xl text-[#5C5C5C] mb-6 font-medium">
-            And somewhere along that path, the idea that defined everything{" "}
-            <br /> I do was born
-          </p>
-          <h2 className="font-medium text-[40px] text-[#052C27]">
-            The Brand Soul Philosophy.
-          </h2>
-        </FadeIn>
+    <section className="bg-surface px-6 pb-22">
+      <div className="mx-auto max-w-4xl text-center mb-9">
+        <p className="text-xl text-[#5C5C5C] mb-6 font-medium">
+          And somewhere along that path, the idea that defined everything <br />{" "}
+          I do was born
+        </p>
+        <h2 className="font-medium text-[40px] text-[#052C27]">
+          The Brand Soul Philosophy.
+        </h2>
       </div>
 
       <div className="flex items-center justify-center gap-6">
@@ -49,7 +47,7 @@ export default function PillarsSection() {
         </FadeIn>
       </div>
 
-      <div className="mx-auto mt-20 max-w-3xl text-center">
+      <div className="mx-auto mt-14 max-w-3xl text-center">
         <FadeIn delay={0.4}>
           <p className="text-xl font-medium text-gray-600">
             Because every brand, just like every human, has a soul. When you
