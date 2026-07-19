@@ -23,7 +23,7 @@ export default function Navbar() {
         </ul>
 
         <div className="inline-block rounded-full bg-linear-to-r from-[#F8EEA4] to-[#C7A008] p-[2px] shadow-[0_4px_4px_rgba(199,160,8,0.25)]">
-          <button className="rounded-full bg-white px-6 py-3.5 h-11.5 w-39.5 text-base font-semibold text-[#17322C]">
+          <button className="rounded-full flex items-center justify-center bg-white px-6 py-3.5 h-11.5 w-39.5 text-base font-semibold text-[#17322C]">
             Work With Me
           </button>
         </div>
