@@ -23,7 +23,7 @@ export default function PillarsSection() {
           And somewhere along that path, the idea that defined everything <br />{" "}
           I do was born
         </p>
-        <h2 className="font-medium text-[40px] text-[#052C27]">
+        <h2 className="font-medium text-[40px] text-primary">
           The Brand Soul Philosophy.
         </h2>
       </div>
@@ -49,7 +49,7 @@ export default function PillarsSection() {
           Because every brand, just like every human, has a soul. When you find{" "}
           <br />
           it, align with it, and express it with integrity —{" "}
-          <span className="text-[#052C27]">it creates movement.</span>
+          <span className="text-primary">it creates movement.</span>
         </p>
       </div>
     </section>

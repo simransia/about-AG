@@ -49,7 +49,7 @@ function BrandItem({
 
         {/* Right Side: Text */}
         <div className="text-center md:text-left w-[55%]">
-          <h3 className="font-anton text-[64px] tracking-tight opacity-80 text-[#052C27]">
+          <h3 className="font-anton text-[64px] tracking-tight opacity-80 text-primary">
             {name}
           </h3>
           <p className="mt-4 text-base font-medium text-gray-500 md:text-xl max-w-md">

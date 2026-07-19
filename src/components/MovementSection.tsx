@@ -6,7 +6,7 @@ export default function MovementSection() {
       id="building-for-bharat"
       className="relative overflow-hidden bg-surface px-6 pb-43"
     >
-      <div className="text-[128px] font-anton opacity-80 flex flex-col text-[#052C27]">
+      <div className="text-[128px] font-anton opacity-80 flex flex-col text-primary">
         <motion.div
           initial={{ x: -400, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}

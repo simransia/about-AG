@@ -192,7 +192,7 @@ function ManifestoBlock({ data }: { data: any }) {
 
 export default function ManifestoSection() {
   return (
-    <section className="bg-[#052C27] px-6 py-15">
+    <section className="bg-primary px-6 py-15">
       <div className="">
         <div>
           <h2 className="text-center font-sans text-[40px] font-medium text-[#F5F5F5]">

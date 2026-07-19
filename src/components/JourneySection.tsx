@@ -10,7 +10,7 @@ export default function JourneySection() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-[40px] font-medium px-6 leading-snug text-[#052C27]">
+        <h2 className="text-[40px] font-medium px-6 leading-snug text-primary">
           My journey didn&apos;t start with a business plan
           <br /> It started with questions
         </h2>

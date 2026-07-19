@@ -79,7 +79,7 @@ export default function TestimonialsSection() {
                   className="h-12.5 w-12.5 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-semibold text-xl mb-1.5 text-[#052C27] opacity-80">
+                  <h4 className="font-semibold text-xl mb-1.5 text-primary opacity-80">
                     {test.name}
                   </h4>
                   <p className="text-base font-medium text-[#151515] opacity-80">

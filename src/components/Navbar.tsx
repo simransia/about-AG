@@ -4,7 +4,7 @@ import { NAV_LINKS } from "../data/content";
 export default function Navbar() {
   return (
     <header className="absolute top-[22px] left-[25px] right-[25px] z-20 ">
-      <nav className="flex w-full items-center justify-between rounded-full bg-[#052C27] px-5 py-3 shadow-lg md:px-8 md:py-4.5">
+      <nav className="flex w-full items-center justify-between rounded-full bg-primary px-5 py-3 shadow-lg md:px-8 md:py-4.5">
         <a href="#" className="">
           <img src={LOGO} alt="brand logo" className="h-7 w-31" />
         </a>

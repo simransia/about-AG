@@ -28,7 +28,7 @@ export default function NextChapterSection() {
               <RevealLine
                 key={lineIndex}
                 color1="text-[#dfdfdf]"
-                color2="text-[#052C27]"
+                color2="text-primary"
                 start={line.start}
                 end={line.end}
                 progress={scrollYProgress}

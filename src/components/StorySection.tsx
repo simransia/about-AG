@@ -16,7 +16,7 @@ export default function StorySection() {
           where we didn&apos;t just design websites or logos...
         </p>
 
-        <p className="mt-1 text-2xl font-medium text-[#052C27]">
+        <p className="mt-1 text-2xl font-medium text-primary">
           we understood people.
         </p>
       </div>
