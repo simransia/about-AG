@@ -39,7 +39,7 @@ function BrandItem({
               className="relative w-full max-w-[320px]"
             >
               <img
-                src={BRAND_IMAGE}
+                src={imagePath ?? BRAND_IMAGE}
                 alt={name}
                 className="relative h-49 w-79 object-cover shadow-lg"
               />
