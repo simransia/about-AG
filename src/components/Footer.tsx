@@ -52,8 +52,9 @@ export default function Footer() {
       <div className="mt-45 flex flex-col items-end justify-between gap-8 md:flex-row">
         <img src={LOGO} alt="Alkesh" className="h-12 object-contain" />
         <p className="text-base text-[#F5F5F5]">
-          Copyright © {new Date().getFullYear()} Alkesh Gupta. All rights
-          reserved. By DIIGIIHOST
+          Copyright ©{" "}
+          <span className="font-sans">{new Date().getFullYear()}</span> Alkesh
+          Gupta. All rights reserved. By DIIGIIHOST
         </p>
       </div>
     </footer>
