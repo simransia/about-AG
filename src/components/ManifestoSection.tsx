@@ -195,7 +195,7 @@ export default function ManifestoSection() {
     <section className="bg-[#052C27] px-6 py-15">
       <div className="">
         <div>
-          <h2 className="text-center font-sans text-[40px] font-semibold text-[#F5F5F5]">
+          <h2 className="text-center font-sans text-[40px] font-medium text-[#F5F5F5]">
             The Brand Soul Manifesto
           </h2>
         </div>

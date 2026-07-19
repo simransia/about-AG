@@ -1,8 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@600;700&family=Great+Vibes&family=Inter:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+@font-face {
+  font-family: "Altone";
+  src: url("./assets/fonts/Altone-Trial-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Anton";
+  src: url("./assets/fonts/Anton-Regular.ttf") format("truetype");
+}
 
 @theme {
+  --font-altone: "Altone", sans-serif;
   --font-anton: "Anton", sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --font-serif: "Cormorant Garamond", Georgia, serif;
@@ -29,10 +37,10 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
   background: #fff;
   color: #333;
   overflow-x: hidden;
+  font-family: var(--font-altone);
 }
 
 #root {

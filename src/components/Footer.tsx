@@ -17,7 +17,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-19 sm:flex-row sm:gap-24">
-          <ul className="space-y-5 font-sans text-xl text-[#F5F5F5]">
+          <ul className="space-y-5 text-xl text-[#F5F5F5]">
             {MAIN_LINKS.map((link) => (
               <li key={link}>
                 <a href="#" className="hover:text-white transition">
@@ -27,7 +27,7 @@ export default function Footer() {
             ))}
           </ul>
 
-          <ul className="space-y-5 font-sans text-xl text-[#F5F5F5]">
+          <ul className="space-y-5 text-xl text-[#F5F5F5]">
             {SUB_LINKS.map((link) => (
               <li key={link}>
                 <a href="#" className="hover:text-white transition">
@@ -37,7 +37,7 @@ export default function Footer() {
             ))}
           </ul>
 
-          <ul className="space-y-5 font-sans text-xl text-[#F5F5F5]">
+          <ul className="space-y-5 text-xl text-[#F5F5F5]">
             {SOCIAL_LINKS.map((link) => (
               <li key={link}>
                 <a href="#" className="hover:text-white transition">

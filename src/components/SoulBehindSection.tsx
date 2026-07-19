@@ -31,7 +31,7 @@ export default function StorySection() {
           style={{ y: titleY }}
           className="absolute left-10 top-0 bottom-0 w-[28%]"
         >
-          <p className="text-[40px] leading-12 text-surface">
+          <p className="text-[40px] font-medium text-surface">
             The Soul Behind the Brand
           </p>
         </motion.div>
