@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
-import aboutImage from "../assets/about-agphoto.png";
 import team1 from "../assets/Dr.-Gaikwad 1.png";
 import team2 from "../assets/Anuved1.png";
 import team3 from "../assets/nafscob1.png";
 import team4 from "../assets/Soupherb1.png";
 import team5 from "../assets/Anuved1.png";
+
+const teamImages = [team1, team2, team3, team4, team5];
 
 export default function StorySection() {
   return (
@@ -28,31 +29,14 @@ export default function StorySection() {
           transition={{ duration: 0.8 }}
         >
           <div className="flex items-center justify-center gap-4">
-            <img
-              src={team1}
-              alt="Alkesh Gupta and team"
-              className="w-[204px] h-60 object-cover"
-            />
-            <img
-              src={team2}
-              alt="Alkesh Gupta and team"
-              className="w-[204px] h-60 object-cover"
-            />
-            <img
-              src={team3}
-              alt="Alkesh Gupta and team"
-              className="w-[204px] h-60 object-cover"
-            />
-            <img
-              src={team4}
-              alt="Alkesh Gupta and team"
-              className="w-[204px] h-60 object-cover"
-            />
-            <img
-              src={team5}
-              alt="Alkesh Gupta and team"
-              className="w-[204px] h-60 object-cover"
-            />
+            {teamImages.map((imgSrc, index) => (
+              <img
+                key={index}
+                src={imgSrc}
+                alt="Alkesh Gupta and team"
+                className="w-[204px] h-60 object-cover"
+              />
+            ))}
           </div>
         </motion.div>
       </div>

@@ -6,6 +6,7 @@ import PillarsSection from "./components/PillarsSection";
 import MovementSection from "./components/MovementSection";
 import BrandsSection from "./components/BrandsSection";
 import SoulBehindSection from "./components/SoulBehindSection";
+// import About from "./components/About";
 import ManifestoSection from "./components/ManifestoSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import NextChapterSection from "./components/NextChapterSection";
@@ -15,7 +16,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <main>
+      <main className="bg-surface">
         <HeroSection />
         <JourneySection />
         <StorySection />

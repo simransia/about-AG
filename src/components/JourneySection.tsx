@@ -1,19 +1,9 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import officeImage from "../assets/office-space.png";
 
 export default function JourneySection() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  // Light parallax for the office image
-  const imageY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
-
   return (
-    <section ref={ref} className="bg-surface py-28">
+    <section className="bg-surface py-28">
       <motion.div
         initial={{ x: -400, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -46,14 +36,12 @@ export default function JourneySection() {
         </div>
       </motion.div>
 
-      <div>
-        <div className="mx-auto mt-24 md:mt-30 overflow-hidden rounded bg-black relative">
-          <img
-            src={officeImage}
-            alt="Office Space"
-            className="h-full w-full object-cover"
-          />
-        </div>
+      <div className="mx-auto mt-24 md:mt-30 relative px-6">
+        <img
+          src={officeImage}
+          alt="Office Space"
+          className="h-full w-full object-cover"
+        />
       </div>
     </section>
   );

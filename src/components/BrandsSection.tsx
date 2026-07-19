@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import BRAND_IMAGE from "../assets/brand.png";
 import { brands } from "../data/content";
 
@@ -15,7 +15,6 @@ function BrandItem({
   imagePath?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { margin: "-20% 0px -20% 0px" });
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -42,7 +41,7 @@ function BrandItem({
               <img
                 src={BRAND_IMAGE}
                 alt={name}
-                className="relative h-48 w-full object-cover shadow-lg"
+                className="relative h-49 w-79 object-cover shadow-lg"
               />
             </motion.div>
           )}

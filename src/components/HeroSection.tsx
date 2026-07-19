@@ -1,27 +1,12 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { HERO_IMAGE } from "../data/content";
 import Navbar from "./Navbar";
+import heroImage from "../assets/hero.png";
 
 export default function HeroSection() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  // const { scrollYProgress } = useScroll({
-  //   target: containerRef,
-  //   offset: ['start start', 'end start'],
-  // })
-
-  // // Light parallax effect for the background image
-  // const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
-
   return (
-    <section
-      ref={containerRef}
-      className="relative h-[881px] overflow-hidden bg-black"
-    >
+    <section className="relative h-[881px] overflow-hidden bg-black">
       <Navbar />
       <img
-        src={HERO_IMAGE}
+        src={heroImage}
         alt="Alkesh Gupta"
         className="h-full w-full object-cover object-top"
       />

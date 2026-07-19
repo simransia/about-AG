@@ -1,98 +1,122 @@
-import heroImage from '../assets/hero.png'
-import officeImage from '../assets/office-space.png'
-import portraitImage from '../assets/about-agphoto.png' // actually portrait is 'about-agphoto.png' or 'Dr.-Gaikwad 1.png'? Let me check the assets. Let's use 'about-agphoto.png' or wait, the soul behind brand has Alkesh's portrait which was just Alkesh sitting. Ah, wait, there's `brand.png`, `hero.png`, `office-space.png`, `scale.png`, `science.png`, `soul.png`, `about-agphoto.png`. There is no `portrait.png` but there is an Alkesh picture. Looking at assets: `about-agphoto.png` is 10MB! Let's import `about-agphoto.png`. Wait, no, `Alkesh Gupta` is in `about-agphoto.png`? Actually, looking at the hero section, the image of Alkesh in Hero is `hero.png`. Wait, let me just check the actual images. I will just import and use them.
+import BRAND_IMAGE from "../assets/brand.png";
 
 export type Brand = {
-  name: string
-  tagline: string
-  hasImage?: boolean
-  imagePath?: string
-}
-
-import anuvedImage from '../assets/Anuved1.png'
-import bniImage from '../assets/bni1.png'
-import drGaikwadImage from '../assets/Dr.-Gaikwad 1.png'
-import nafscobImage from '../assets/nafscob1.png'
-import soupherbImage from '../assets/Soupherb1.png'
+  name: string;
+  tagline: string;
+  hasImage?: boolean;
+  imagePath?: string;
+};
 
 export const brands: Brand[] = [
   {
-    name: 'DiigiiHost',
-    tagline: 'Making Digital Affordable And Human For Small Businesses',
+    name: "DiigiiHost",
+    tagline: "Making Digital Affordable And Human For Small Businesses",
     hasImage: true,
-    imagePath: officeImage,
+    imagePath: BRAND_IMAGE,
   },
   {
-    name: 'Best Rate Websites',
-    tagline: 'Making Digital Affordable And Human For Small Businesses',
+    name: "Best Rate Websites",
+    tagline: "Making Digital Affordable And Human For Small Businesses",
   },
   {
-    name: 'Anuved',
-    tagline: 'Rediscovering Purity Through Devotion',
+    name: "Anuved",
+    tagline: "Rediscovering Purity Through Devotion",
     hasImage: true,
-    imagePath: anuvedImage,
+    imagePath: BRAND_IMAGE,
   },
   {
-    name: 'Soupherb',
-    tagline: 'Reimagining Wellness With Purpose',
+    name: "Soupherb",
+    tagline: "Reimagining Wellness With Purpose",
     hasImage: true,
-    imagePath: soupherbImage,
+    imagePath: BRAND_IMAGE,
   },
   {
-    name: 'NM Fest',
-    tagline: 'Giving A City Its Symbol, Its Pride, And Its Global Identity.',
+    name: "NM Fest",
+    tagline: "Giving A City Its Symbol, Its Pride, And Its Global Identity.",
     hasImage: true,
-    imagePath: bniImage, // using bni for nm fest for now
+    imagePath: BRAND_IMAGE,
   },
   {
-    name: 'Combo Jumbo & COJ',
-    tagline: 'Transforming Restaurants Into Communities Built On Togetherness',
+    name: "Combo Jumbo & COJ",
+    tagline: "Transforming Restaurants Into Communities Built On Togetherness",
   },
   {
-    name: 'Learn & Achieve',
-    tagline: 'Turning Fragmented Learning Into A Nationwide Education Ecosystem',
-  },
-  {
-    name: 'Akirhs',
+    name: "Learn & Achieve",
     tagline:
-      'Where Deep Tech Finds Its Voice, And Engineering Becomes A Clear Narrative.',
-    hasImage: true,
-    imagePath: bniImage,
+      "Turning Fragmented Learning Into A Nationwide Education Ecosystem",
   },
   {
-    name: 'NAFSCOB',
+    name: "Akirhs",
     tagline:
-      'Where Deep Tech Finds Its Voice, And Engineering Becomes A Clear Narrative.',
+      "Where Deep Tech Finds Its Voice, And Engineering Becomes A Clear Narrative.",
     hasImage: true,
-    imagePath: nafscobImage,
+    imagePath: BRAND_IMAGE,
   },
   {
-    name: 'HEFT',
+    name: "NAFSCOB",
     tagline:
-      'Transforming Heavy-Lifting Certification Into A 3-Day Intelligent, Automated System.',
+      "Where Deep Tech Finds Its Voice, And Engineering Becomes A Clear Narrative.",
     hasImage: true,
-    imagePath: bniImage,
+    imagePath: BRAND_IMAGE,
   },
   {
-    name: 'World Flair',
+    name: "HEFT",
     tagline:
-      'Unifying Global Sports Procurement Into One Smart, Consolidated Engine.',
-  },
-  {
-    name: 'Dr. Gaikwad',
-    tagline: 'Proof That Science, Design, And Soul Can Coexist.',
+      "Transforming Heavy-Lifting Certification Into A 3-Day Intelligent, Automated System.",
     hasImage: true,
-    imagePath: drGaikwadImage,
+    imagePath: BRAND_IMAGE,
   },
   {
-    name: 'Loma Dental',
-    tagline: 'Proof That Science, Design, And Soul Can Coexist.',
+    name: "World Flair",
+    tagline:
+      "Unifying Global Sports Procurement Into One Smart, Consolidated Engine.",
   },
-]
+  {
+    name: "Dr. Gaikwad",
+    tagline: "Proof That Science, Design, And Soul Can Coexist.",
+    hasImage: true,
+    imagePath: BRAND_IMAGE,
+  },
+  {
+    name: "Loma Dental",
+    tagline: "Proof That Science, Design, And Soul Can Coexist.",
+  },
+];
 
-export const BRAND_IMAGE =
-  'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80'
+export const NAV_LINKS = [
+  { label: "Brand Soul", href: "#brand-soul" },
+  { label: "Building For Bharat", href: "#building-for-bharat" },
+  { label: "Learn with AG", href: "#learn-with-ag" },
+];
 
-export const HERO_IMAGE = heroImage
-export const OFFICE_IMAGE = officeImage
-export const PORTRAIT_IMAGE = portraitImage
+export const NEXT_CHAPTER_BLOCKS = [
+  [
+    {
+      text: "My Next Chapter Is About Building With People,",
+      start: 0,
+      end: 0.1,
+    },
+    { text: "Not Just For Them.", start: 0.1, end: 0.2 },
+  ],
+  [
+    { text: "Through The Bharat Building Mission,", start: 0.2, end: 0.3 },
+    { text: "I'm Creating A Community Of Founders", start: 0.3, end: 0.4 },
+    {
+      text: "From Every Corner Of India — Tier 2, Tier 3,",
+      start: 0.4,
+      end: 0.5,
+    },
+    { text: "And Beyond", start: 0.5, end: 0.6 },
+  ],
+  [
+    {
+      text: "Who Want To Grow With Purpose, Not Pressure.",
+      start: 0.6,
+      end: 0.7,
+    },
+    { text: "Because Someday, When Someone Says", start: 0.7, end: 0.8 },
+    { text: '"Bharat Is Rising,"', start: 0.8, end: 0.85 },
+    { text: "I Want To Know", start: 0.85, end: 0.9 },
+    { text: "We Helped Build That Rise, With Soul.", start: 0.9, end: 1 },
+  ],
+];

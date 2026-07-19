@@ -1,4 +1,3 @@
-import FadeIn from "./FadeIn";
 import quoteBg from "../assets/end-quote.png";
 
 export default function QuoteSection() {

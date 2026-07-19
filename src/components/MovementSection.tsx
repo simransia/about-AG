@@ -1,17 +1,8 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function MovementSection() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
   return (
     <section
-      ref={ref}
       id="building-for-bharat"
       className="relative overflow-hidden bg-surface px-6 pb-43"
     >

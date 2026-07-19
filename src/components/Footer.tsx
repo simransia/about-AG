@@ -1,4 +1,4 @@
-import alkeshLogo from "../assets/alkeshsirlogo-footer.png";
+import LOGO from "../assets/alkeshsirlogo.png";
 
 const MAIN_LINKS = ["about", "work", "services", "contact"];
 const SUB_LINKS = ["diigiihost", "quote your price", "best rate websites"];
@@ -49,8 +49,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-45 flex flex-col items-center justify-between gap-8 md:flex-row">
-        <img src={alkeshLogo} alt="Alkesh" className="h-12 object-contain" />
+      <div className="mt-45 flex flex-col items-end justify-between gap-8 md:flex-row">
+        <img src={LOGO} alt="Alkesh" className="h-12 object-contain" />
         <p className="text-base text-[#F5F5F5]">
           Copyright © {new Date().getFullYear()} Alkesh Gupta. All rights
           reserved. By DIIGIIHOST

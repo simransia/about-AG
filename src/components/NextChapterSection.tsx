@@ -1,38 +1,45 @@
-import FadeIn from './FadeIn'
+import { RevealLine } from "./RevelLine";
+import { useRef } from "react";
+import { useScroll } from "framer-motion";
+import { NEXT_CHAPTER_BLOCKS } from "../data/content";
 
 export default function NextChapterSection() {
+  const blockRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: blockRef,
+    offset: ["start 80%", "end 40%"],
+  });
+
   return (
-    <section className="bg-surface px-6 py-32 md:py-48">
-      <div className="mx-auto max-w-5xl text-center">
-        <FadeIn>
-          <h2 className="font-display text-5xl font-bold tracking-tight text-brand-green md:text-7xl lg:text-8xl"
-              style={{ lineHeight: 1.1 }}>
-            My Next Chapter Is About Building With People, <br className="hidden md:block" />
-            <span className="text-gray-400">Not Just For Them.</span>
-          </h2>
-        </FadeIn>
-
-        <FadeIn delay={0.2}>
-          <div className="mx-auto mt-32 max-w-4xl space-y-24">
-            <p className="font-display text-4xl tracking-wide text-gray-800 md:text-6xl lg:text-7xl"
-               style={{ lineHeight: 1.1 }}>
-              Through The Bharat Building Mission, I&apos;m Creating A Community Of Founders From Every Corner Of India — Tier 2, Tier 3, And Beyond
-            </p>
-
-            <p className="font-display text-4xl tracking-wide text-gray-800 md:text-6xl lg:text-7xl"
-               style={{ lineHeight: 1.1 }}>
-              Who Want To Grow With Purpose, Not Pressure.
-            </p>
-
-            <p className="font-display text-4xl tracking-wide text-brand-teal md:text-6xl lg:text-7xl"
-               style={{ lineHeight: 1.1 }}>
-              Because Someday, When Someone Says <br />
-              <span className="text-gray-900">"Bharat Is Rising,"</span> <br />
-              I Want To Know We Helped Build That Rise, With Soul.
-            </p>
+    <section ref={blockRef} className="relative px-8">
+      <div className="border-b border-[#5C5C5C] text-center pb-34 pt-47">
+        <div className="bg-linear-to-r absolute right-40 top-120 z-10 rounded-full w-25 h-25 from-[#F8EEA4] to-[#C7A008] p-[2px]">
+          <div className="rounded-full w-full h-full text-surface text-base font-medium bg-black flex items-center justify-center">
+            Join <br /> Mission
           </div>
-        </FadeIn>
+        </div>
+        {NEXT_CHAPTER_BLOCKS.map((block, blockIndex) => (
+          <div
+            key={blockIndex}
+            className={`${blockIndex == NEXT_CHAPTER_BLOCKS.length - 1 ? "" : "mb-50"} flex flex-col items-center`}
+          >
+            {block.map((line, lineIndex) => (
+              <RevealLine
+                key={lineIndex}
+                color1="text-[#dfdfdf]"
+                color2="text-[#052C27]"
+                start={line.start}
+                end={line.end}
+                progress={scrollYProgress}
+                className="font-anton font-bold leading-[70px] w-max text-6xl"
+              >
+                {line.text}
+              </RevealLine>
+            ))}
+          </div>
+        ))}
       </div>
     </section>
-  )
+  );
 }

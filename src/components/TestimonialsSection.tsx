@@ -1,4 +1,4 @@
-import FadeIn from "./FadeIn";
+import arrowIcon from "../assets/arrow.png";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 
@@ -48,14 +48,14 @@ export default function TestimonialsSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="bg-surface py-24 md:py-32 overflow-hidden">
+    <section className="bg-surface pt-24 overflow-hidden px-4">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="text-center text-[40px] font-medium text-[#151515] md:text-[40px]">
+        <h2 className="text-center text-[40px] font-medium text-[#151515]">
           What People Say
         </h2>
       </div>
 
-      <div className="mt-20 w-full cursor-grab active:cursor-grabbing">
+      <div className="mt-21 w-full cursor-grab active:cursor-grabbing">
         <motion.div
           ref={scrollRef}
           className="flex gap-12 overflow-x-auto pb-12 px-6 md:px-12 hide-scrollbar md:gap-16 lg:gap-28"
@@ -69,18 +69,20 @@ export default function TestimonialsSection() {
               key={idx}
               className="flex w-[300px] shrink-0 flex-col justify-between"
             >
-              <p className="text-base font-medium leading-relaxed text-gray-500 md:text-[17px]">
+              <p className="text-xl font-medium leading-relaxed text-[#151515] opacity-80">
                 "{test.quote}"
               </p>
-              <div className="mt-8 flex items-center gap-4">
+              <div className="mt-8 flex items-center gap-6">
                 <img
                   src={test.image}
                   alt={test.name}
-                  className="h-11 w-11 rounded-full object-cover"
+                  className="h-12.5 w-12.5 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-semibold text-[#1a3c34]">{test.name}</h4>
-                  <p className="text-[13px] font-medium text-gray-500">
+                  <h4 className="font-semibold text-xl mb-1.5 text-[#052C27] opacity-80">
+                    {test.name}
+                  </h4>
+                  <p className="text-base font-medium text-[#151515] opacity-80">
                     {test.role}
                   </p>
                 </div>
@@ -90,40 +92,21 @@ export default function TestimonialsSection() {
         </motion.div>
       </div>
 
-      <div className="mx-6 mt-8 flex justify-center border-b border-gray-300 pb-20">
-        <button className="flex items-center gap-3 rounded-full border border-[#5C5C5C] bg-transparent py-1.5 pl-2 pr-1.5 transition-colors hover:bg-gray-100">
-          <div className="flex -space-x-2">
-            <img
-              src={test1}
-              alt="User 1"
-              className="h-8 w-8 rounded-full border-2 border-[#F5F5F5] object-cover"
-            />
-            <img
-              src={test2}
-              alt="User 2"
-              className="h-8 w-8 rounded-full border-2 border-[#F5F5F5] object-cover"
-            />
-            <img
-              src={test3}
-              alt="User 3"
-              className="h-8 w-8 rounded-full border-2 border-[#F5F5F5] object-cover"
-            />
+      <div className="mx-6 mt-8 flex justify-center pb-26 border-b border-[#5C5C5C]">
+        <button className="flex items-center gap-3 rounded-full border border-[#5C5C5C] bg-transparent transition-colors hover:bg-gray-100">
+          <div className="flex -space-x-2 py-3 pl-2.5 pr-2">
+            {[test1, test2, test3].map((imgSrc, idx) => (
+              <img
+                key={idx}
+                src={imgSrc}
+                alt={`User ${idx + 1}`}
+                className="h-10 w-10 rounded-full border-2 border-[#F5F5F5] object-cover"
+              />
+            ))}
           </div>
-          <span className="text-sm font-medium text-gray-700 px-2">More</span>
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#052C27] text-white">
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="7" y1="17" x2="17" y2="7"></line>
-              <polyline points="7 7 17 7 17 17"></polyline>
-            </svg>
+          <span className="text-xl font-medium text-[#5C5C5C]">More</span>
+          <div className="w-max p-2.5">
+            <img src={arrowIcon} alt="redirect arrow" className="h-12 w-12" />
           </div>
         </button>
       </div>
